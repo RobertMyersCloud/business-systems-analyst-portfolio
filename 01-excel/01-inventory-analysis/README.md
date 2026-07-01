@@ -1,209 +1,270 @@
 # Inventory Analysis Workbook
 
-## Dashboard Preview
+![Inventory Analysis Dashboard](./inventory_analysis_dashboard_preview.png)
 
-![Inventory Analysis Dashboard](inventory_analysis_dashboard_preview.png)
+## Executive Summary
 
-## Project Overview
+This project is an Excel-based inventory analysis workbook built for a Business Systems Analyst portfolio.
 
-This is my first Excel proof project for my Business Systems Analyst portfolio.
+The purpose of the workbook is simple: take inventory data, clean it up, analyze it, and turn it into a dashboard that leadership can use to make better decisions.
 
-The goal of this project was to take inventory data, clean it up, analyze it, and turn it into something leadership could actually use. I wanted this to look less like a basic Excel exercise and more like the type of workbook an analyst would build to support purchasing, inventory planning, warehouse operations, or ERP decision-making.
+This is not meant to be a basic Excel exercise. I built this project to show practical analyst work around inventory value, reorder risk, overstock risk, aging inventory, warehouse summaries, and business findings.
 
-This workbook focuses on inventory value, low-stock risk, overstock risk, aging inventory, warehouse distribution, category summaries, and business findings.
+The sample data in this workbook is fictional and was created for portfolio purposes. No company, customer, vendor, employee, or private business data is included.
 
-The data used in this project is sample data created for portfolio purposes. No company, customer, vendor, employee, or private business data is included.
+---
 
 ## Business Problem
 
-Leadership needs a clear view of inventory across multiple warehouses.
+Inventory leaders need visibility into what is sitting in stock, where it is located, what it is worth, and what needs attention.
 
-The main questions this workbook is designed to answer are:
+Without a clean inventory view, the business can run into problems like:
 
-- What is the total value of inventory on hand?
-- Which warehouses are carrying the most inventory value?
+- Stockouts that delay production or operations
+- Overstock that ties up working capital
+- Aging inventory that may need review or disposition
+- Poor visibility across warehouses
+- Slow decision-making because data is spread across different reports
+
+This workbook helps answer the questions leadership would care about first:
+
+- What is the total inventory value?
+- How many SKUs are being managed?
+- Which warehouses carry the most inventory value?
 - Which items are below reorder point?
 - Which items are overstocked?
-- Which inventory categories represent the highest value?
-- Which items may require management attention due to aging, low stock, or excess stock?
-- What should leadership review first?
+- Which categories carry the most exposure?
+- Which items may require management review?
 
-In a real business environment, this type of workbook could help purchasing, supply chain, operations, or warehouse leadership make better decisions about replenishment, working capital, and inventory risk.
+---
+
+## Project Goal
+
+The goal of this project was to build a practical Excel workbook that could support inventory planning, purchasing decisions, warehouse review, or ERP reporting.
+
+The workbook was designed to show that I can:
+
+- Work with structured business data
+- Clean and organize inventory records
+- Build useful calculations
+- Identify inventory risks
+- Summarize results by warehouse and category
+- Create a dashboard for leadership
+- Document findings in a way that supports business decisions
+
+---
 
 ## Tools Used
 
 - Microsoft Excel
 - Excel tables
-- Structured data cleanup
 - Formulas
 - SUMIFS
 - COUNTIFS
 - Conditional formatting
-- Pivot-style summaries
-- Dashboard layout
+- Dashboard design
 - Charts
 - Data dictionary documentation
 
+---
+
 ## Skills Demonstrated
 
-This project demonstrates practical Excel skills that are useful for Business Analyst, Business Systems Analyst, Supply Chain Analyst, ERP Analyst, and Operations Analyst roles.
+This project demonstrates Excel and analyst skills that apply directly to Business Analyst, Business Systems Analyst, ERP Analyst, Supply Chain Analyst, Procurement Analyst, and Operations Analyst roles.
 
 Key skills shown:
 
-- Cleaned and structured inventory data
-- Organized raw data into a usable analysis format
-- Calculated total inventory value
-- Identified low-stock items
-- Identified overstock items
-- Flagged aging inventory risk
-- Built warehouse-level summaries
-- Built category-level summaries
-- Used formulas to summarize business data
-- Applied conditional formatting to highlight risks
-- Created an executive-style dashboard
-- Documented workbook fields in a data dictionary
-- Added business findings and talking points
+- Inventory data cleanup
+- Structured workbook design
+- Inventory value calculation
+- Reorder risk identification
+- Overstock risk identification
+- Aging inventory review
+- Warehouse-level reporting
+- Category-level reporting
+- KPI dashboard development
+- Business findings documentation
+- Data dictionary creation
+- Executive-style communication
 
-## Workbook Files
-
-| File | Description |
-|---|---|
-| `inventory_analysis_workbook.xlsx` | Main Excel workbook with raw data, cleaned data, dashboard, data dictionary, and supporting lists |
-| `inventory_analysis_dashboard_preview.png` | Dashboard preview image for quick viewing in GitHub |
-| `README.md` | Project explanation and documentation |
+---
 
 ## Workbook Structure
 
-The workbook includes the following tabs:
-
 | Tab | Purpose |
 |---|---|
-| `README` | High-level workbook instructions and purpose |
+| `README` | Workbook overview and instructions |
 | `Raw_Data` | Original sample inventory dataset |
-| `Clean_Data` | Structured data used for analysis and dashboard reporting |
-| `Dashboard` | Executive-style summary of inventory value, risk, and key findings |
-| `Data_Dictionary` | Definitions for workbook fields and calculated columns |
-| `Lists` | Supporting lookup lists and validation values |
+| `Clean_Data` | Cleaned and structured inventory data used for analysis |
+| `Dashboard` | Executive dashboard with KPIs, summaries, charts, and findings |
+| `Data_Dictionary` | Field definitions and workbook documentation |
+| `Lists` | Supporting values used for workbook structure |
 
-## Key Metrics Included
+---
+
+## Files Included
+
+| File | Description |
+|---|---|
+| `inventory_analysis_workbook.xlsx` | Main Excel workbook |
+| `inventory_analysis_dashboard_preview.png` | Dashboard preview image |
+| `README.md` | Project documentation |
+
+---
+
+## Dashboard Metrics
 
 The dashboard includes the following metrics:
 
-- Total inventory value
-- Total SKU count
-- Low-stock item count
-- Overstock item count
-- Aging risk item count
-- Average lead time
-- Inventory value by warehouse
-- SKU count by warehouse
-- Low-stock items by warehouse
-- Overstock items by warehouse
-- Inventory value by category
-- SKU count by category
-- Low-stock items by category
-- Overstock items by category
+| Metric | Business Purpose |
+|---|---|
+| Total Inventory Value | Shows total dollar value of inventory on hand |
+| Total SKUs | Shows total number of inventory items being tracked |
+| Low-Stock Items | Identifies items that may need reorder review |
+| Overstock Items | Identifies items carrying excess inventory |
+| Aging Risk Items | Flags items that may need management review |
+| Average Lead Time | Shows average supplier or replenishment lead time |
+| Inventory by Warehouse | Shows where inventory value is concentrated |
+| Inventory by Category | Shows which categories carry the most exposure |
+| Low Stock by Warehouse | Helps identify warehouse-level replenishment risk |
+| Overstock by Warehouse | Helps identify excess stock by location |
 
-## Business Logic Used
+---
 
-The workbook uses simple but practical business logic to support inventory analysis.
+## Business Logic
+
+The workbook uses straightforward business logic to flag inventory risks.
 
 ### Inventory Value
 
-Inventory value is calculated using quantity on hand and unit cost.
-
 ```text
-Inventory Value = Quantity On Hand x Unit Cost
+Inventory Value = Quantity On Hand × Unit Cost
 ```
 
-### Reorder Risk
+This shows how much money is tied up in each inventory item.
 
-An item is flagged for reorder review when quantity on hand is at or below the reorder point.
+### Reorder Risk
 
 ```text
 If Quantity On Hand <= Reorder Point, then Reorder Needed
 ```
 
-### Overstock Risk
+This flags items that may need purchasing or planning review.
 
-An item is flagged as overstocked when quantity on hand is above the maximum stock level.
+### Overstock Risk
 
 ```text
 If Quantity On Hand > Max Stock Level, then Overstock
 ```
 
+This flags items that may be tying up working capital.
+
 ### Aging Inventory Risk
 
-Items are flagged for aging review when the last receipt date indicates the item may have been sitting too long without movement.
-
 ```text
-If item age exceeds the aging threshold, then Aging Risk
+If inventory age exceeds the review threshold, then Aging Risk
 ```
 
-## Key Outputs
+This flags items that may need disposition, demand review, or management attention.
 
-This workbook produces several useful outputs:
+---
 
-- Inventory dashboard
-- Warehouse inventory summary
-- Category inventory summary
-- Low-stock risk indicators
-- Overstock indicators
-- Aging inventory indicators
-- Executive talking points
-- Data dictionary
+## Key Findings Shown in the Dashboard
+
+The dashboard is designed to help leadership quickly identify:
+
+1. Which warehouse carries the highest inventory value
+2. Which inventory categories have the most exposure
+3. Which items may need to be reordered
+4. Which items may be overstocked
+5. Which inventory may be aging
+6. Where purchasing or planning should focus first
+7. What data should be reviewed before making inventory decisions
+
+---
 
 ## Business Value
 
-This workbook helps leadership identify inventory issues before they become bigger operational problems.
+This workbook gives leadership a quick way to review inventory health.
 
-The value of this project is that it gives the business a quick way to see:
+In a real business environment, this type of analysis could help:
 
-- Where inventory value is concentrated
-- Which warehouses may be carrying too much stock
-- Which items may need to be reordered
-- Which items may be tying up working capital
-- Which categories need closer review
-- Where purchasing or planning decisions may need adjustment
+- Reduce stockout risk
+- Improve purchasing decisions
+- Identify excess inventory
+- Reduce working capital tied up in inventory
+- Improve warehouse visibility
+- Support ERP reporting
+- Support planning and replenishment decisions
+- Give leadership a cleaner view of operational risk
 
-In a real company, this type of analysis could support better purchasing decisions, reduce stockout risk, reduce excess inventory, and improve inventory planning.
+The value is not just the dashboard. The value is the ability to turn raw inventory data into something the business can act on.
 
-## Analyst Findings / Talking Points
-
-Based on the dashboard structure, the analyst should be prepared to discuss:
-
-1. Which warehouse carries the highest inventory value
-2. Which categories have the most inventory exposure
-3. Which items are below reorder point
-4. Which items are overstocked
-5. Which items may be aging and need disposition review
-6. How this workbook could support purchasing, planning, or ERP reporting
-7. How this type of analysis could be expanded into Power BI or connected to SQL data
+---
 
 ## How This Connects to Business Systems Analysis
 
-This project is not just an Excel file. It is meant to show how Excel can support business systems work.
+This project connects directly to Business Systems Analyst work.
 
-A Business Systems Analyst may need to:
+A Business Systems Analyst often needs to understand the business process, the system data, the reporting need, and the decision being made.
 
-- Pull inventory data from an ERP system
-- Validate that the data is complete
-- Clean and organize the data
-- Identify exceptions
-- Build summaries for stakeholders
-- Document business findings
-- Support user acceptance testing
-- Help leadership understand what the data is saying
+This workbook shows that process:
 
-This project supports that type of work.
+```text
+Raw Data → Clean Data → Business Logic → Dashboard → Findings → Decision Support
+```
 
-It also connects to ERP and supply chain systems because inventory data often comes from systems such as SAP, Microsoft Dynamics 365, Oracle, NetSuite, or other warehouse and procurement platforms.
+In a real ERP environment, this type of data could come from systems such as:
 
-## Career Portfolio Context
+- SAP
+- Microsoft Dynamics 365
+- Oracle
+- NetSuite
+- Warehouse management systems
+- Procurement systems
 
-This project is part of my larger Business Systems Analyst portfolio.
+A Business Systems Analyst may use this type of workbook to support requirements gathering, reporting validation, process improvement, UAT, or stakeholder discussions.
 
-The portfolio is focused on practical proof of skills in:
+---
+
+## Analyst Talking Points
+
+This project gives me a real portfolio item I can discuss in an interview.
+
+Talking points:
+
+- I built an Excel workbook to analyze inventory value, low-stock risk, overstock risk, and aging inventory.
+- I structured the workbook with raw data, cleaned data, a dashboard, a data dictionary, and supporting lists.
+- I used formulas and summary logic to turn item-level inventory data into leadership-level KPIs.
+- I created warehouse and category summaries to help identify where inventory risk is concentrated.
+- I documented the project so another analyst, stakeholder, or reviewer could understand the workbook.
+- This type of analysis could support ERP reporting, inventory planning, procurement decisions, or Power BI dashboard development.
+
+---
+
+## What I Would Improve Next
+
+Future improvements could include:
+
+- Add Power Query for repeatable data cleanup
+- Add PivotTables and slicers for interactive filtering
+- Add purchase order history
+- Add supplier performance data
+- Add inventory movement history
+- Add aging buckets
+- Add reorder recommendation logic
+- Add SQL-based source data
+- Build a matching Power BI dashboard
+- Add a formal findings and recommendations tab
+- Expand the project into a full supply chain reporting package
+
+---
+
+## Portfolio Context
+
+This project is part of my Business Systems Analyst portfolio.
+
+The portfolio is focused on practical proof across:
 
 - Excel
 - SQL
@@ -214,27 +275,14 @@ The portfolio is focused on practical proof of skills in:
 - IAM
 - GRC and audit controls
 
-My goal is to show real analyst-style work instead of only listing training or certifications.
+The goal is to show real analyst-style work, not just list training or certifications.
 
-## What I Would Improve Next
-
-Future improvements for this workbook could include:
-
-- Add Power Query for automated data cleanup
-- Add more detailed supplier performance data
-- Add purchase order history
-- Add inventory movement history
-- Add reorder recommendations
-- Add aging buckets
-- Add slicers for warehouse and category
-- Build a matching Power BI dashboard
-- Connect the workbook to SQL-based inventory data
-- Add a formal findings and recommendations tab
+---
 
 ## Why I Built This
 
-I built this project to show that I can use Excel to solve real business problems.
+I built this project because I wanted the first proof in my portfolio to connect directly to my background in supply chain, inventory, procurement, and operations.
 
-The focus was not just on formulas or charts. The focus was on taking business data, organizing it, identifying risks, and presenting the information in a way that leadership could use.
+Excel is still one of the most common tools used in business analysis, supply chain, ERP support, and reporting. This project shows that I can use Excel to organize data, identify risk, summarize findings, and support leadership decisions.
 
-This is the type of work I want to continue building on as I move deeper into Business Systems Analyst, ERP Analyst, Supply Chain Systems Analyst, and controls-focused analyst roles.
+This is the first project in the portfolio, and it will be expanded with SQL, Power BI, ERP process work, IAM access reviews, and GRC control examples.
