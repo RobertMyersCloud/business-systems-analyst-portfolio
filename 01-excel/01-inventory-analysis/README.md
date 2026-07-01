@@ -1,6 +1,6 @@
 # Inventory Analysis Workbook
 
-![Inventory Analysis Dashboard](./inventory_analysis_dashboard_preview.png)
+![Inventory Analysis Dashboard](../../inventory_analysis_dashboard_preview.png)
 
 ## Executive Summary
 
